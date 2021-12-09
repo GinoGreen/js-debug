@@ -4,9 +4,10 @@
             <img src="../assets/img/spotify-logo.png" alt="Spotify" />
         </div>
         <div>
+            <!-- dentro emit, changedGenre era scritto male -->
             <select
                 v-model="genreFilter"
-                @change="$emit('changedGenere', genreFilter)"
+                @change="$emit('changedGenre', genreFilter)"
                 class="form-select mt-3"
             >
                 <option value="">Seleziona un genere</option>

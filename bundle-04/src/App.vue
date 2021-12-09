@@ -1,6 +1,7 @@
 <template>
     <div id="app">
-        <Header :genres="genresList" :authors="authorsList" @changedGenre="startGenreSearch" @chaangedAuthor="startAuthorSearch" />
+        <Header :genres="genresList" :authors="authorsList" @changedGenre="startGenreSearch" @changedAuthor="startAuthorSearch" />
+        <!-- @changeAutor era scritto male -->
 
         <Main :selectedGenre="genreToSearch" :selectedAuthor="authorToSearch" @genresAndAuthorsReady="getGenresAndAuthorsList" />
     </div>
@@ -29,10 +30,12 @@ export default {
             // allGenresAndAuthors = {}; non devo resettare l'oggetto
             this.genresList = allGenresAndAuthors.genres;
             this.authorsList = allGenresAndAuthors.authors;
+            console.log('CIAOOOOOOOOOO');
         },
         startGenreSearch(genreToSearch) {
             console.log(genreToSearch);
-            genreToSearch = "";
+            console.log('CIAOOOOOOOOOO');
+            // genreToSearch = ""; non devo resettare il parametro
             this.genreToSearch = genreToSearch;
         },
         startAuthorSearch(authorToSearch) {
