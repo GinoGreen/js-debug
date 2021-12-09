@@ -1,9 +1,9 @@
 <template>
     <div class="disc p-3 text-center">
         <div class="p-3">
-            <img class="img-fluid mb-3" :src="discs.poster" :alt="disc.name" />
+            <img class="img-fluid mb-3" :src="disc.poster" :alt="disc.name" /> <!--disc, non discs -->
             <p class="title text-uppercase fw-bold">{{ disc.title }}</p>
-            <p class="author lead mb-0">{ disc.author }</p>
+            <p class="author lead mb-0">{{ disc.author }}</p> <!--doppia graffa -->
             <p class="year">{{ disc.year }}</p>
         </div>
     </div>
@@ -13,7 +13,7 @@
 export default {
     name: "Disc",
     props: {
-        disc: String,
+        disc: Object, //disc é un oggetto, non una stringa
     },
 };
 </script>
@@ -33,3 +33,4 @@ div {
     height: 100%;
 }
 </style>
+

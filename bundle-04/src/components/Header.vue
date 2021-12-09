@@ -10,9 +10,10 @@
                 class="form-select mt-3"
             >
                 <option value="">Seleziona un genere</option>
+                <!-- index differenti per ciclo v-for -->
                 <option
                     v-for="(genre, index) in genres"
-                    :key="index"
+                    :key="`genre ${index}`"
                     :value="genre"
                 >
                     {{ genre }}
@@ -26,12 +27,13 @@
                 class="form-select mt-3"
             >
                 <option value="">Seleziona un autore</option>
+                <!-- index differenti per ciclo v-for -->
                 <option
                     v-for="(author, index) in authors"
-                    :key="index"
+                    :key="`author ${index}`"
                     :value="author"
                 >
-                    {{ genre }}
+                    {{ author }} <!--author, non genre -->
                 </option>
             </select>
 
